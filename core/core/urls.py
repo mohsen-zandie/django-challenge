@@ -17,11 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls.static import static
+from django.urls.conf import include
 
 from core import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api_auth/', include('rest_framework.urls')),
+    path('events/', include('events.urls')),
 ]
 
 # Serve static and media files in development
