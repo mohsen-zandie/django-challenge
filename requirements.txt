@@ -2,5 +2,10 @@
 django >3.2,<3.3
 python-decouple
 djangorestframework
-markdown       # Markdown support for the browsable API.
-django-filter  # Filtering support
+
+# third party modules
+markdown       
+django-filter  
+drf-yasg[validation]
+
+# deployment modules
