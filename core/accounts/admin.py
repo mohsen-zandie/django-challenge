@@ -10,5 +10,16 @@ class CustomUserAdmin(UserAdmin):
     search_fields = ('email',)
     ordering = ('email',)
 
+    fieldsets = (
+        ('Authentication', {'fields': ('email', 'password')}),
+        ('Permissions', {'fields': ('is_staff', 'is_active',
+         'is_superuser', 'groups', 'user_permissions')}),
+    )
+    add_fieldsets = (
+        ('Authentication', {'fields': ('email', 'password1', 'password2')}),
+        ('Permissions', {'fields': ('is_staff', 'is_active',
+         'is_superuser', 'groups', 'user_permissions')}),
+    )
+
 
 admin.site.register(User, CustomUserAdmin)
