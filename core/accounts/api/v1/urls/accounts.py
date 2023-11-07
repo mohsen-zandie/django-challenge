@@ -6,8 +6,6 @@ from rest_framework_simplejwt.views import (
     TokenVerifyView
 )
 
-app_name = 'api-v1'
-
 urlpatterns = [
     # registration
     path('registration/', views.RegistrationApiView.as_view(), name='registration'),
@@ -26,8 +24,5 @@ urlpatterns = [
     path('jwt/create/', views.CustomTokenObtainPairView.as_view(), name="jwt-create"),
     path('jwt/refresh/', TokenRefreshView.as_view(), name="jwt-refresh"),
     path('jwt/verify/', TokenVerifyView.as_view(), name="jwt-verify"),
-
-    # profile
-    path('profile/', views.ProfileApiView.as_view(), name="profile"),
 
 ]
