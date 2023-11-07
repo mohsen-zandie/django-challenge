@@ -1,10 +1,16 @@
-from rest_framework.routers import DefaultRouter
+from django.urls import path
+from accounts.api.v1 import views
+
 
 app_name = 'api-v1'
 
-# router = DefaultRouter()
-# router.register("account", views.EventModelViewSet, basename="account")
+urlpatterns = [
+    # registration
+    path('registration/', views.RegistrationApiView.as_view(), name='registration')
 
-# urlpatterns = router.urls
+    # change password
+    # reset password
+    # login token
+    # login jwt
 
-urlpatterns = []
+]
