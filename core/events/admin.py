@@ -1,38 +1,5 @@
 from django.contrib import admin
-from events.models import Stadium, Event
-
-
-class StadiumAdmin(admin.ModelAdmin):
-    list_display = (
-        "name",
-        "capacity",
-        "city",
-        "country",
-        "address",
-        "opened",
-        "created_at",
-        "updated_at",
-    )
-    list_filter = (
-        "name",
-        "capacity",
-        "city",
-        "country",
-        "address",
-        "opened",
-        "created_at",
-        "updated_at",
-    )
-    search_fields = (
-        "name",
-        "capacity",
-        "city",
-        "country",
-        "address",
-        "opened",
-        "created_at",
-        "updated_at",
-    )
+from events.models import Event
 
 
 class EventAdmin(admin.ModelAdmin):
@@ -65,5 +32,4 @@ class EventAdmin(admin.ModelAdmin):
     )
 
 
-admin.site.register(Stadium, StadiumAdmin)
 admin.site.register(Event, EventAdmin)

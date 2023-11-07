@@ -5,6 +5,5 @@ app_name = "api-v1"
 
 router = DefaultRouter()
 router.register("event", views.EventModelViewSet, basename="event")
-router.register("stadium", views.StadiumModelViewSet, basename="stadium")
 
 urlpatterns = router.urls
