@@ -12,6 +12,9 @@ rest_framework_simplejwt
 # refactoring and test
 black
 flake8
+pytest
+pytest-django
+
 
 
 # deployment modules
