@@ -20,3 +20,15 @@ class Ticket(models.Model):
 
     def __str__(self):
         return f"{self.event} - {self.user}"
+
+
+class Basket(models.Model):
+    """
+    Basket model
+    """
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    ticket = models.ForeignKey(Ticket, on_delete=models.CASCADE)
+    is_paid = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)

@@ -43,6 +43,7 @@ urlpatterns = [
     path("api_auth/", include("rest_framework.urls")),
     path("accounts/", include("accounts.urls")),
     path("events/", include("events.urls")),
+    path("tickets/", include("tickets.urls")),
     path(
         "swagger/output.json",
         schema_view.without_ui(cache_timeout=0),
