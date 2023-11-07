@@ -9,4 +9,9 @@ django-filter
 drf-yasg[validation]
 rest_framework_simplejwt
 
+# refactoring and test
+black
+flake8
+
+
 # deployment modules

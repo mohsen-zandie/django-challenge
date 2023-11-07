@@ -6,9 +6,10 @@ from accounts.models.users import User
 
 
 class Profile(models.Model):
-    '''
-    User profile model 
-    '''
+    """
+    User profile model
+    """
+
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=255, blank=True)
     last_name = models.CharField(max_length=255, blank=True)

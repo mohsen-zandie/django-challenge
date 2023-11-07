@@ -7,9 +7,10 @@ User = get_user_model()
 
 
 class Ticket(models.Model):
-    '''
+    """
     Ticket model
-    '''
+    """
+
     event = models.ForeignKey(Event, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     seat = models.CharField(max_length=10)
@@ -18,4 +19,4 @@ class Ticket(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f'{self.event} - {self.user}'
+        return f"{self.event} - {self.user}"

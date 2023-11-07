@@ -2,9 +2,10 @@ from django.db import models
 
 
 class Stadium(models.Model):
-    '''
+    """
     Stadium model (arena, stadium, etc.)
-    '''
+    """
+
     name = models.CharField(max_length=100)
     capacity = models.IntegerField()
     city = models.CharField(max_length=100)
@@ -20,9 +21,10 @@ class Stadium(models.Model):
 
 
 class Event(models.Model):
-    '''
+    """
     Event model (match, concert, etc.)
-    '''
+    """
+
     name = models.CharField(max_length=100)
     stadium = models.ForeignKey(Stadium, on_delete=models.CASCADE)
     date = models.DateField()

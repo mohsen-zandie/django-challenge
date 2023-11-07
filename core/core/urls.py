@@ -39,10 +39,10 @@ schema_view = get_schema_view(
 )
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api_auth/', include('rest_framework.urls')),
+    path("admin/", admin.site.urls),
+    path("api_auth/", include("rest_framework.urls")),
     path("accounts/", include("accounts.urls")),
-    path('events/', include('events.urls')),
+    path("events/", include("events.urls")),
     path(
         "swagger/output.json",
         schema_view.without_ui(cache_timeout=0),
@@ -62,7 +62,9 @@ urlpatterns = [
 
 # Serve static and media files in development
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL,
-                          document_root=settings.MEDIA_ROOT)
-    urlpatterns += static(settings.STATIC_URL,
-                          document_root=settings.STATIC_ROOT)
+    urlpatterns += static(
+        settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
+    )
+    urlpatterns += static(
+        settings.STATIC_URL, document_root=settings.STATIC_ROOT
+    )
