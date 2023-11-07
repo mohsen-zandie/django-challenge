@@ -1,6 +1,7 @@
 from django.contrib import admin
 
-from tickets.models import Ticket, Basket
+from tickets.models.tickets import Ticket
+from tickets.models.baskets import Basket
 
 # Register your models here.
 

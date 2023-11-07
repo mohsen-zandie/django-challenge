@@ -1,7 +1,8 @@
 from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated
 
-from tickets.models import Ticket, Basket
+from tickets.models.tickets import Ticket
+from tickets.models.baskets import Basket
 from tickets.api.v1.serializers import TicketSerializer, BasketSerializer
 
 
