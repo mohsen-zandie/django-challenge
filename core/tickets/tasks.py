@@ -4,7 +4,7 @@ from django.contrib.auth import get_user_model
 
 from tickets.models.tickets import Ticket
 from tickets.models.baskets import Basket
-from events.models import Event
+from events.models.events import Event
 
 # getting user model
 User = get_user_model()
